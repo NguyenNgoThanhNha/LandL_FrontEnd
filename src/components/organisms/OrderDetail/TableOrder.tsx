@@ -8,7 +8,6 @@ import {
   TableRow
 } from '@/components/atoms/ui/table.tsx'
 import { TOrder } from '@/types/OrderType.ts'
-import { cn } from '@/utils/cn.ts'
 import { ChevronRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { ROUTES } from '@/contants/routerEndpoint.ts'
@@ -28,7 +27,6 @@ const TableOrder = ({ data }: TableOrderProps) => {
         <TableRow>
           <TableHead className='w-[200px]'>Order</TableHead>
           <TableHead>Status</TableHead>
-          <TableHead>Driver</TableHead>
           <TableHead>Publish Date</TableHead>
           <TableHead className='text-right'>Cost</TableHead>
           <TableHead></TableHead>
@@ -40,9 +38,6 @@ const TableOrder = ({ data }: TableOrderProps) => {
             <TableRow key={index}>
               <TableCell className={'font-medium '}>{order.orderCode}</TableCell>
               <TableCell>{order.status}</TableCell>
-              <TableCell className={cn(order.orderDriver?.fullName !== null && 'text-orangeTheme font-medium')}>
-                <p> {order.orderDriver?.fullName ?? 'Waiting...'}</p>
-              </TableCell>
               <TableCell>{formatDate(order.orderDate)}</TableCell>
               <TableCell className={'text-right'}>{formatCurrency(order.totalAmount)}</TableCell>
               <TableCell>

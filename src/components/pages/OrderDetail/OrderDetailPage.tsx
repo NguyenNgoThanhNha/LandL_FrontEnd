@@ -114,18 +114,18 @@ const OrderDetailPage = () => {
               </div>
             </div>
           </div>
-          <div className={'col-span-1 flex gap-2'}>
+          <div className={'col-span-1 flex gap-2 max-sm:text-md  max-sm:col-span-2'}>
             <span className={'font-medium text-lg'}>Cost:</span>
             <p className={'text-orangeTheme text-lg font-semibold'}>{formatCurrency(order?.totalPrice ?? 0)}</p>
           </div>
-          <div className={'col-span-1  flex gap-2'}>
-            <span className={'font-medium text-lg'}>Date Intend:</span>
-            <p className={'text-orangeTheme text-lg font-semibold'}>
+          <div className={'col-span-1  flex gap-2 text-lg max-sm:text-md max-sm:col-span-2'}>
+            <span className={'font-medium '}>Date Intend:</span>
+            <p className={'text-orangeTheme  font-semibold'}>
               {formatDate(order?.deliveryInfoDetail?.orderDate ?? '')}
             </p>
           </div>
         </div>
-        <Accordion type='multiple' className='mx-14 ' defaultValue={['item-0', 'item-1', 'item-2']}>
+        <Accordion type='multiple' className='mx-14 max-sm:mx-4 ' defaultValue={['item-0', 'item-1', 'item-2']}>
           {status >= 1 && (
             <AccordionItem value='item-0'>
               <AccordionTrigger>

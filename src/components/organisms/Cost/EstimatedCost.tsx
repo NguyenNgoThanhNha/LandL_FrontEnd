@@ -20,15 +20,13 @@ import PriceDialog from '@/components/organisms/Service/PriceDialog.tsx'
 import { getDirection, getLocationByPlaceId } from '@/services/mapService.ts'
 import { LngLat } from 'mapbox-gl'
 import { useAuth } from '@/context/authContext.tsx'
+import { formatCurrency } from '@/utils/formatCurrency.ts'
 
-const SearchElement = () => {
+const EstimatedCost = () => {
   const [price, setPrice] = useState<number>(0)
-  const [openModelPrice, setOpenModelPrice] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
   const [placeIdSource, setPlaceIdSource] = useState<string>('')
   const [placeIdDestination, setPlaceIdDestination] = useState<string>('')
-  const [infoPriceList, setInfoPriceList] = useState<any>({})
-  const { auth } = useAuth()
   const form = useForm<SearchProductType>({
     resolver: zodResolver(SearchProductSchema),
     defaultValues: {
@@ -42,11 +40,8 @@ const SearchElement = () => {
       time: new Date(Date.now())
     }
   })
+  const { auth } = useAuth()
 
-  const [confirmData, setConfirmData] = useState<ConfirmProductType | {}>({})
-  const onClose = () => {
-    setOpenModelPrice(false)
-  }
   const onSubmit: SubmitHandler<SearchProductType> = async (data: SearchProductType) => {
     if (placeIdSource === '' || placeIdDestination === '') {
       return toast.error('Please choose a valid search product')
@@ -72,7 +67,6 @@ const SearchElement = () => {
     setLoading(false)
     if (response.success) {
       setPrice(response?.result?.data?.vehicleCost[response?.result?.data?.vehicleTypes[0]?.vehicleTypeId] as number)
-      setOpenModelPrice(true)
       setConfirmData({
         ...expectedData,
         longFrom: lngLatSource.lng.toString(),
@@ -84,7 +78,6 @@ const SearchElement = () => {
         totalAmount: response?.result?.data?.vehicleCost[response?.result?.data?.vehicleTypes[0]?.vehicleTypeId],
         vehicleTypeId: response?.result?.data?.vehicleTypes[0]?.vehicleTypeId.toString() as string
       })
-      setInfoPriceList({ ...response?.result?.data?.vehicleCost })
     } else {
       toast.error(response?.result?.message as string)
     }
@@ -159,7 +152,8 @@ const SearchElement = () => {
             classContent={'col-span-2 max-sm:col-span-3'}
           />
 
-          <div className={'col-span-6 flex justify-end '}>
+          <div className={'col-span-6 flex justify-between '}>
+            <div className={'font-semibold'}>{price != 0 && `Cost Estimate: ${formatCurrency(price)}`}</div>
             <Button className={'bg-orangeTheme w-fit hover:bg-orangeTheme/90 px-6 '} type={'submit'}>
               Search
             </Button>
@@ -167,17 +161,8 @@ const SearchElement = () => {
         </div>
       </form>
       {loading && <Loading />}
-      {openModelPrice && (
-        <PriceDialog
-          price={price}
-          confirmData={confirmData}
-          open={openModelPrice}
-          onClose={onClose}
-          infoPriceList={infoPriceList}
-        />
-      )}
     </Form>
   )
 }
 
-export default SearchElement
+export default EstimatedCost

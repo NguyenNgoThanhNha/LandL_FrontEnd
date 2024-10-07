@@ -70,20 +70,20 @@ const ProductInformation = ({ order, setIsUpdatedOrder }: Props) => {
                   name={'productName'}
                   form={form}
                   placeholder={'Ex: Item name'}
-                  classContent={'col-span-1'}
+                  classContent={'col-span-1 max-sm:col-span-2'}
                   autoFocus
                 />
                 <FormInput
                   name={'productDescription'}
                   form={form}
                   placeholder={'Ex: Item description'}
-                  classContent={'col-span-1'}
+                  classContent={'col-span-1 max-sm:col-span-2'}
                 />
                 <FormField
                   control={form.control}
                   name={'image'}
                   render={({ field }) => (
-                    <FormItem className={cn('relative col-span-1')}>
+                    <FormItem className={cn('relative col-span-1 max-sm:col-span-2')}>
                       <FormControl>
                         <Input
                           className='bg-white'
@@ -113,42 +113,42 @@ const ProductInformation = ({ order, setIsUpdatedOrder }: Props) => {
             </form>
           </Form>
           <div className={'grid grid-cols-2  gap-x-2 gap-y-4 pl-4'}>
-            <div className={'grid grid-cols-4 col-span-1'}>
-              <span className={'col-span-1 font-medium'}>Total Weight:</span>
-              <p className={'col-span-3'}>{order?.productInfo?.weight}</p>
+            <div className={'grid grid-cols-4 col-span-1 max-sm:col-span-2'}>
+              <span className={'col-span-1 font-medium max-sm:col-span-2'}>Total Weight:</span>
+              <p className={'col-span-3 max-sm:col-span-2'}>{order?.productInfo?.weight}</p>
             </div>
-            <div className={'grid grid-cols-4 col-span-1'}>
-              <span className={'col-span-1 font-medium'}>Total dimension:</span>
-              <p className={'col-span-3'}>{order?.productInfo?.totalDismension} (m)</p>
+            <div className={'grid grid-cols-4 col-span-1 max-sm:col-span-2'}>
+              <span className={'col-span-1 font-medium max-sm:col-span-2'}>Total dimension:</span>
+              <p className={'col-span-3 max-sm:col-span-2'}>{order?.productInfo?.totalDismension} (m)</p>
             </div>
           </div>
         </div>
       ) : (
         <div className={'grid grid-cols-2  gap-x-2 gap-y-4 pl-4'}>
-          <div className={'col-span-1'}>
+          <div className={'col-span-1 max-sm:col-span-2'}>
             <div className={'grid grid-cols-4 '}>
-              <span className={'col-span-1 font-medium'}>Product name</span>
-              <p className={'col-span-3'}>{order?.productInfo?.productName}</p>
+              <span className={'col-span-1 font-medium  max-sm:col-span-2'}>Product name</span>
+              <p className={'col-span-3  max-sm:col-span-2'}>{order?.productInfo?.productName}</p>
             </div>
-            <div className={'grid grid-cols-4 '}>
-              <span className={'col-span-1 font-medium'}>Product description</span>
-              <p className={'col-span-3'}>{order?.productInfo?.productDescription}</p>
+            <div className={'grid grid-cols-4  max-sm:col-span-2'}>
+              <span className={'col-span-1 font-medium  max-sm:col-span-2'}>Product description</span>
+              <p className={'col-span-3  max-sm:col-span-2'}>{order?.productInfo?.productDescription}</p>
             </div>
-            <div className={'grid grid-cols-4 '}>
-              <span className={'col-span-1 font-medium'}>Total Weight:</span>
-              <p className={'col-span-3'}>{order?.productInfo?.weight}</p>
+            <div className={'grid grid-cols-4  max-sm:col-span-2'}>
+              <span className={'col-span-1 font-medium  max-sm:col-span-2'}>Total Weight:</span>
+              <p className={'col-span-3  max-sm:col-span-2'}>{order?.productInfo?.weight}</p>
             </div>
-            <div className={'grid grid-cols-4 '}>
-              <span className={'col-span-1 font-medium'}>Total dimension:</span>
-              <p className={'col-span-3'}>{order?.productInfo?.totalDismension} (m)</p>
+            <div className={'grid grid-cols-4  max-sm:col-span-2'}>
+              <span className={'col-span-1 font-medium max-sm:col-span-2'}>Total dimension:</span>
+              <p className={'col-span-3  max-sm:col-span-2'}>{order?.productInfo?.totalDismension} (m)</p>
             </div>
           </div>
-          <div className={'col-span-1'}>
+          <div className={'col-span-1  max-sm:col-span-2'}>
             <img
               src={order?.productInfo?.image}
               loading={'lazy'}
               alt={''}
-              className={'col-span-1 w-1/2 h-40 object-cover'}
+              className={'col-span-1  max-sm:col-span-2 w-1/2 h-40 object-cover'}
             />
           </div>
         </div>

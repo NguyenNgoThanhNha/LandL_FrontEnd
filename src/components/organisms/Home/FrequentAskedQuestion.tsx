@@ -12,7 +12,7 @@ const FrequentAskedQuestion = () => {
           FREQUENTLY ASKED <br /> QUESTIONS
         </div>
       </div>
-      <Accordion type={'single'} collapsible className={'w-[500px] rounded'}>
+      <Accordion type={'single'} collapsible className={'md:w-[500px] max-sm:w-full rounded'}>
         {FREQUENT_ASKED_QUESTIONS.map((question) => (
           <AccordionLine id={question.id} title={question.title} content={question.content} key={question.id} />
         ))}

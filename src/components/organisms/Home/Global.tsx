@@ -17,7 +17,7 @@ const Fast = () => {
         <div className=' bg-white p-3 rounded-full'>
           <ArrowUp size={26} className='text-blue-800' strokeWidth={1} />
         </div>
-        <p className={'uppercase text-[56px] font-black text-white p-2 tracking-tighter'}>{t('global')} </p>
+        <p className={'uppercase text-[56px] font-black text-white text-center p-2 tracking-tighter'}>{t('global')} </p>
       </div>
     </div>
   )

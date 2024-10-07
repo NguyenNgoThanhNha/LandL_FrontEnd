@@ -10,14 +10,14 @@ const TruckInformation = ({ driver }: Props) => {
     <div className={'flex  flex-col p-4'}>
       {/*<p className={'uppercase font-semibold text-orangeTheme text-lg justify-start my-2'}>Truck information</p>*/}
       <div className={'grid grid-cols-2 gap-4'}>
-        <div className={'cols-span-1 px-4 gap-4 flex justify-center items-center'}>
+        <div className={'col-span-1  max-sm:col-span-2 px-4 gap-4 flex justify-center items-center'}>
           <img src={generateImage(driver?.fullName ?? '')} alt={''} className={'w-20 h-20 rounded-md'} />
-          <div className={'cols-span-1 px-4 gap-4'}>
+          <div className={'col-span-1 px-4 gap-4  max-sm:col-span-2'}>
             <p className={'col-span-2'}>{driver?.fullName}</p>
             <p className={'col-span-2'}>{driver?.phone}</p>
           </div>
         </div>
-        <div className={'cols-span-2'}>
+        <div className={'col-span-2'}>
           <div className={'flex justify-between'}>
             <p className={'font-medium text-xl'}>Ventom car</p>
             <div className={'flex gap-2 border border-1 border-orangeTheme px-3 py-1 rounded-full'}>
@@ -28,7 +28,7 @@ const TruckInformation = ({ driver }: Props) => {
           <Separator className={'my-3'} />
 
           <div className={'flex flex-col gap-3'}>
-            <div className={'grid grid-cols-3'}>
+            <div className={'grid grid-cols-3 '}>
               <p className={'col-span-1 font-medium'}>Payload Capacity</p>
               <p className={'col-span-2'}>3,000 pounds</p>
             </div>

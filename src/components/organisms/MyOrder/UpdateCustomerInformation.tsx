@@ -47,19 +47,29 @@ const UpdateCustomerInformation = ({ order, setIsUpdatedOrder }: Props) => {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <div className={'grid grid-cols-2 gap-y-4 gap-x-8'}>
-              <FormInput name={'senderName'} form={form} placeholder={'Ex: Tran Van A'} classContent={'col-span-1'} />
-              <FormInput name={'receiverName'} form={form} placeholder={'Ex: Tran Van A'} classContent={'col-span-1'} />
+              <FormInput
+                name={'senderName'}
+                form={form}
+                placeholder={'Ex: Tran Van A'}
+                classContent={'col-span-1  max-sm:col-span-2'}
+              />
+              <FormInput
+                name={'receiverName'}
+                form={form}
+                placeholder={'Ex: Tran Van A'}
+                classContent={'col-span-1  max-sm:col-span-2'}
+              />
               <FormInput
                 name={'senderPhone'}
                 form={form}
                 placeholder={'Ex: 0823 645 654'}
-                classContent={'col-span-1'}
+                classContent={'col-span-1  max-sm:col-span-2'}
               />
               <FormInput
                 name={'receiverPhone'}
                 form={form}
                 placeholder={'Ex: 0823 645 654'}
-                classContent={'col-span-1'}
+                classContent={'col-span-1  max-sm:col-span-2'}
               />
               <div className={'ml-auto col-span-2'}>
                 <Button
@@ -75,25 +85,25 @@ const UpdateCustomerInformation = ({ order, setIsUpdatedOrder }: Props) => {
         </Form>
       ) : (
         <div className={'grid grid-cols-2 '}>
-          <div className={'col-span-1'}>
+          <div className={'col-span-1 max-sm:col-span-2 text-md'}>
             <p className={'font-medium '}>Sender</p>
             <div className={'grid grid-cols-5'}>
-              <span className={'col-span-1 font-medium'}>Name:</span>
+              <span className={'col-span-1  font-medium'}>Name:</span>
               <p className={'col-span-4'}>{order?.deliveryInfoDetail?.senderName}</p>
             </div>
             <div className={'grid grid-cols-5'}>
-              <span className={'col-span-1 font-medium'}>Phone Number:</span>
+              <span className={'col-span-1  font-medium'}>Phone Number:</span>
               <p className={'col-span-4'}>{order?.deliveryInfoDetail?.senderPhone}</p>
             </div>
           </div>
-          <div className={'col-span-1'}>
+          <div className={'col-span-1 max-sm:col-span-2 text-md'}>
             <p className={'font-medium'}>Receiver</p>
             <div className={'grid grid-cols-5'}>
-              <span className={'col-span-1 font-medium'}>Name:</span>
+              <span className={'col-span-1  font-medium'}>Name:</span>
               <p className={'col-span-4'}>{order?.deliveryInfoDetail?.receiverName}</p>
             </div>
             <div className={'grid grid-cols-5'}>
-              <span className={'col-span-1 font-medium'}>Phone Number:</span>
+              <span className={'col-span-1  font-medium'}>Phone Number:</span>
               <p className={'col-span-4'}>{order?.deliveryInfoDetail?.receiverPhone}</p>
             </div>
           </div>

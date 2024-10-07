@@ -19,7 +19,7 @@ const GetAQuote = () => {
           <ArrowDown size={26} className='text-blue-800' strokeWidth={1} />
         </div>
         <p className={'uppercase text-[56px] font-black text-white p-2 tracking-tighter'}>{t('safe')} </p>
-        <p className={'text-white pb-2'}>
+        <p className={'text-white pb-2 text-center'}>
           relative bg-cover bg-center w-full h-[300px] items-center justify-center flex flex-col
         </p>
         <Button className={'bg-orangeTheme hover:bg-orangeTheme/90'}>{t('getQuote')}</Button>

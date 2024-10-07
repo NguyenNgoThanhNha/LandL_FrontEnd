@@ -12,7 +12,7 @@ const Footer = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
-      className={' text-white mt-4 md:px-20 py-5 text-sm sm:px-4'}
+      className={' text-white mt-4 md:px-20 py-5 text-md max-sm:px-4'}
     >
       <div className={' flex justify-between items-center border-b  '}>
         <div>

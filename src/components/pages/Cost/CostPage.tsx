@@ -1,18 +1,22 @@
-import cost_page from "../../../assets/images/cost/cost-page.jpg"
-import cost_1 from "../../../assets/images/cost/cost-price1.png"
-import cost_2 from "../../../assets/images/cost/cost-price2.png"
+import cost_page from '../../../assets/images/cost/cost-page.jpg'
+import EstimatedCost from '@/components/organisms/Cost/EstimatedCost.tsx'
+// import cost_1 from "../../../assets/images/cost/cost-price1.png"
+// import cost_2 from "../../../assets/images/cost/cost-price2.png"
 const CostPage = () => {
   return (
-    <div className='flex flex-col items-center gap-4'>
-      <div className='w-full'>
-        <img src={cost_page} loading={'lazy'} alt='cost-1' className='w-full object-cover h-[300px]' />
-      </div>
-      <div className='flex w-1/2'>
-        <div className='flex flex-col gap-10 m-5'>
-          <img src={cost_1} />
-          <img className='mb-3' src={cost_2} />
+    <div className='flex flex-col items-center gap-4 '>
+      <div
+        style={{
+          backgroundImage: `url(${cost_page})`
+        }}
+        className='bg-cover bg-center md:flex items-center justify-center w-full h-[500px] max-sm:grid max-sm:grid-cols-2'
+      >
+        <p className={'flex text-start px-10 md:text-[60px] font-black text-white max-sm:col-span-2 max-sm:text-3xl'}>
+          Cost Evaluation
+        </p>
+        <div className={'flex items-center justify-center md:w-full max-sm:col-span-2'}>
+          <EstimatedCost />
         </div>
-        {/* <TransportationPriceTable /> */}
       </div>
     </div>
   )
