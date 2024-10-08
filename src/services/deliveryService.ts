@@ -63,3 +63,10 @@ interface ConfirmOrderProps {
 export const confirmOrder = async ({ data }: ConfirmOrderProps): Promise<ResponseProps> => {
   return await post('Order/ConfirmOrder', data)
 }
+
+interface SendCostProps {
+  email: string
+}
+export const sendCost = async ({ email }: SendCostProps): Promise<ResponseProps> => {
+  return await get(`User/SendDetailCost?email=${email}`)
+}

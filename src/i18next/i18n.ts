@@ -11,7 +11,7 @@ const resources = {
       Home: 'Home',
       'About us': 'About Us',
       'Create order': 'Create Order',
-      Cost: 'Cost',
+      Cost: 'Cost Estimate',
       Blog: 'Blog',
       'Change language': 'Change language',
       English: 'English',
@@ -62,11 +62,31 @@ const resources = {
       safe: 'Safe',
       getQuote: 'Get a quote',
       fast: 'Fast',
-      global: 'Global Forwarding'
+      global: 'Global Forwarding',
+      address: 'L&L Tower, District 1, Ho Chi Minh City, Viet Nam.',
+      contactToGetEmail: 'Subscribe us for price list',
+      Subscribe: 'Subscribe',
+      followUs: 'Follow us',
+      safeText:
+        'In the transportation industry, maintaining safe practices is essential not only to protect drivers and passengers but also to ensure the secure delivery of goods and services across various routes.',
+      timeWork: 'Mon to Sat',
+      contactUs: 'Contact Us',
+      costE: 'Cost Estimation',
+      help: 'Do you want to hire porters?'
     }
   },
   vi: {
     translation: {
+      help: 'Bạn có muốn thuê bốc vác không',
+      contactUs: 'Liên lạc với chúng tôi',
+      costE: 'Định giá gói cước',
+      timeWork: 'Thứ 2 đến Thứ Bảy',
+      Subscribe: 'Đăng kí',
+      followUs: 'Theo dõi ngay',
+      contactToGetEmail: 'Đăng kí để nhận báo giá',
+      address: 'Tòa nhà L&L, quận 1, thành phố Hồ Chí Minh, Việt Nam',
+      safeText:
+        'Trong ngành vận tải, việc duy trì các biện pháp an toàn là điều cần thiết không chỉ để bảo vệ người lái xe và hành khách mà còn để đảm bảo giao hàng hóa và dịch vụ an toàn trên nhiều tuyến đường khác nhau.',
       global: 'Toàn cầu',
       fast: 'Nhanh chóng',
       getQuote: 'Nhận báo giá',
@@ -95,7 +115,7 @@ const resources = {
       Home: 'Trang chủ',
       'About us': 'Về chúng tôi',
       'Create order': 'Tạo đơn hàng',
-      Cost: 'Bảng giá',
+      Cost: 'Định giá',
       Blog: 'Bài đăng',
       'Change language': 'Đổi ngôn ngữ',
       English: 'Tiếng Anh',
