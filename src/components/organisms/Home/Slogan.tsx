@@ -13,11 +13,11 @@ const Slogan = () => {
       <div className={'flex flex-col gap-6 justify-center items-center'}>
         <div
           className={
-            ' flex flex-col md:text-[60px] max-sm:text-[40px] font-black tracking-tight my-auto gap-4 justify-center items-center'
+            ' flex flex-col md:text-[60px] max-sm:text-[40px] font-black tracking-tight my-auto justify-center items-center'
           }
         >
           <p className={'text-orangeTheme'}>Leopard Lorry</p>
-          <p className={''}>"{t('Leap and Lead')}"</p>
+          <p className={'transform  -translate-y-4'}>"{t('Leap and Lead')}"</p>
         </div>
 
         <p className={'font-medium text-center md:text-md'}>{t('ContentBanner')}</p>

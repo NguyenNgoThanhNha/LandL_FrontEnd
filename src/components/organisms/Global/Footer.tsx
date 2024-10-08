@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
         <div className={'flex md:justify-center  md:pl-10 flex-col gap-1 max-sm:col-span-1'}>
           <p className={'py-2 md:text-[20px] uppercase font-medium'}>{t('contactUs')}</p>
-          <div className={'flex flex-col gap-1 items-start'}>
+          <div className={'flex flex-col items-start text-md'}>
             <p>+84 837 391 311</p>
             <p>L&Lcompany@gmail.com</p>
             <p> {t('timeWork')}</p>
