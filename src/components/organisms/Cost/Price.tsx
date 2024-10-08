@@ -5,7 +5,7 @@ const Price = ({ data }: { data: any }) => {
   console.log(data)
   return (
     <div className={'flex flex-col items-center justify-center gap-10'}>
-      <div className={'flex border  p-4 justify-between w-3/4'}>
+      <div className={'flex border  p-4 justify-between md:w-3/4 max-sm:w-full'}>
         <div>
           <p className={'text-[50px] font-black text-orangeTheme'}>
             {formatCurrency(data?.vehicleCost[data?.vehicleTypes[0]?.vehicleTypeId] as number)}
@@ -17,7 +17,7 @@ const Price = ({ data }: { data: any }) => {
         <img src={coins} alt={'coins'} />
       </div>
 
-      <div className={'flex flex-col text-sm w-3/4 border p-4 gap-3 '}>
+      <div className={'flex flex-col text-sm w-3/4 border p-4 gap-3 max-sm:w-full '}>
         <p>
           In some case, we can't matching your package with the recommend truck so you can pay more a little bit to
           matching with another type truck, such as:

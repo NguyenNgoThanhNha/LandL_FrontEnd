@@ -18,13 +18,13 @@ const CostPage = () => {
       >
         <p
           className={
-            'flex text-start justify-center items-start px-10 md:text-[60px] font-black text-white max-sm:col-span-2 max-sm:text-3xl'
+            'flex text-start justify-center items-start px-10 md:text-[60px] max-sm:text-[50px] font-black text-white max-sm:col-span-2 max-sm:text-3xl'
           }
         >
           {t('costE')}
         </p>
       </div>
-      <div className={'grid grid-cols-2 md:w-full max-sm:col-span-2'}>
+      <div className={'grid md:grid-cols-2  md:w-full max-sm:col-span-1 p-2'}>
         <div className={'col-span-1 md:ml-10 border-r-2'}>
           <p className={'text-[40px] font-black'}>INFORMATION</p>
           <EstimatedCost setData={setData} />

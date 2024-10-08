@@ -6,13 +6,10 @@ import { useTranslation } from 'react-i18next'
 const AboutUsPage = () => {
   const { t } = useTranslation()
   return (
-    <div className='bg-white mt-5 w-full grid grid-cols-2 items-center mb-5'>
-      <div
-        className='relative flex justify-center items-center col-span-1 justify-self-end'
-        style={{ width: '550px', height: '450px' }}
-      >
+    <div className='bg-white mt-5 w-full grid md:grid-cols-2 max-sm:grid-cols-1  max-sm:justify-center max-sm:items-center mb-5'>
+      <div className='relative flex justify-center items-center col-span-1 justify-self-end md:w-[550px] md:h-[450px] max-sm:w-[450px] max-sm:h-[350px] '>
         {/* Orange border outline */}
-        <div className='absolute border-4 border-orange-500 mr-20' style={{ width: '400px', height: '400px' }}></div>
+        <div className='absolute border-4 border-orange-500  mr-20  md:w-[400px] md:h-[400px] max-sm:w-[300px] max-sm:h-[300px]'></div>
 
         {/* Top-left image */}
         <div className='absolute top-0 left-0'>
@@ -21,7 +18,11 @@ const AboutUsPage = () => {
 
         {/* Center image */}
         <div className='relative'>
-          <img src={purple_truck} alt='Purple truck' className='w-[350px] h-[200px] rounded-md' />
+          <img
+            src={purple_truck}
+            alt='Purple truck'
+            className='md:w-[350px] md:h-[200px] rounded-md max-sm:w-64 max-sm:h-44 max-sm:tranform max-sm:translate-x-1/3'
+          />
         </div>
 
         {/* Bottom-left image */}

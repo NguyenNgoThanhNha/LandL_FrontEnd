@@ -145,14 +145,14 @@ const EstimatedCost = ({ setData }: Props) => {
             form={form}
             addDay={7}
             subDay={1}
-            classContent={'col-span-3 max-sm:col-span-3'}
+            classContent={'col-span-3 max-sm:col-span-6'}
           />
           <FormSwitch name={'isInsurance'} content={'Cargo insurance'} form={form} classContent={'md:col-span-6'} />
           <FormSwitch
             name={'isHelp'}
             content={'Do you want to hire porters?'}
             form={form}
-            classContent={'md:col-span-6'}
+            classContent={'md:col-span-6 max-sm:col-span-6'}
           />
 
           <div className={'col-span-6 flex justify-end '}>
