@@ -1,11 +1,12 @@
 import FrequentAskedQuestion from '@/components/organisms/Home/FrequentAskedQuestion.tsx'
-import bgImage from '@/assets/images/home/portrait-professor-work-educational-system.jpg'
 const FaqLine = () => {
   return (
     <div className={'grid md:grid-cols-2 sm:grid-cols-1 w-full py-8'}>
       <div className={'items-center justify-center flex relative mb-4'}>
         <img
-          src={bgImage}
+          src={
+            'https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562720/portrait-professor-work-educational-system_u2umnk.jpg'
+          }
           className={'md:w-96 md:h-96 max-sm:h-72 max-sm:w-72 object-cover  rounded-full'}
           alt={'/home-5.png'}
         />

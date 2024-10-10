@@ -1,4 +1,3 @@
-import bgHome from '@/assets/images/home/global.jpg'
 import { ArrowUp } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
@@ -8,7 +7,7 @@ const Fast = () => {
     <div className='relative bg-cover bg-center w-full h-[300px]  items-center justify-center flex flex-col'>
       <div
         style={{
-          backgroundImage: `url(${bgHome})`
+          backgroundImage: `url(https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562676/cost-page_dn6ulw.jpg)`
         }}
         className='absolute inset-0 bg-cover bg-center z-0  '
       ></div>

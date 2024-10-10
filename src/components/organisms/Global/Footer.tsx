@@ -1,5 +1,4 @@
 import { Separator } from '@/components/atoms/ui/separator.tsx'
-import cost_page from '../../../assets/images/cost/cost-page.jpg'
 import { Button } from '@/components/atoms/ui/button.tsx'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -32,7 +31,7 @@ const Footer = () => {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${cost_page})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562676/cost-page_dn6ulw.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -51,7 +50,7 @@ const Footer = () => {
           <div className={'flex md:ml-auto justify-center items-center'}>
             <Input
               placeholder={'Enter your email here'}
-              className={'rounded-none w-80'}
+              className={'rounded-none w-80 text-black'}
               onChange={(e) => setEmail(e.target.value)}
             />
             <Button

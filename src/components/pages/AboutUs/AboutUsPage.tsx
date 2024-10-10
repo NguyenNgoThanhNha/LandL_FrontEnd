@@ -1,5 +1,4 @@
 import red_truck from '../../../assets/images/home/red-line.jpg'
-import green_truck from '../../../assets/images/home/truck-green.jpg'
 import purple_truck from '../../../assets/images/home/truck-purple.jpg'
 import { useTranslation } from 'react-i18next'
 
@@ -27,7 +26,11 @@ const AboutUsPage = () => {
 
         {/* Bottom-left image */}
         <div className='absolute bottom-0 left-0'>
-          <img src={green_truck} alt='Green truck' className='w-60 h-44 rounded-md' />
+          <img
+            src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562950/truck-green_msmhqy.jpg'}
+            alt='Green truck'
+            className='w-60 h-44 rounded-md'
+          />
         </div>
       </div>
 
