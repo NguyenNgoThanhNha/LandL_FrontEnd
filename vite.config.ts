@@ -16,9 +16,8 @@ export default defineConfig({
     port: 5173,
     hmr: {
       clientPort: 443, // If you're using HTTPS (adjust this if needed)
-      port: 5173, // This should be the same as the server port
       host: 'leopardlorry.com', // Your domain or IP
-      protocol: 'ws', // 'wss' if using HTTPS
+      protocol: 'wss', // 'wss' if using HTTPS
     }// you can replace this port with any port
   },
   resolve: {
