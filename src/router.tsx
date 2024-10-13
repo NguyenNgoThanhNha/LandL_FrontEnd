@@ -1,31 +1,31 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '@/contants/routerEndpoint.ts'
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import Loading from '@/components/templates/Loading.tsx'
 import AdminTruckPage from './components/pages/Admin/AdminTruckPage'
 import AdminCustomerPage from './components/pages/Admin/AdminCustomerPage'
 import AdminOrderPage from './components/pages/Admin/AdminOrderPage'
 import { useAuth } from './context/authContext'
-const LoginPage = React.lazy(() => import('@/components/pages/Login/LoginPage.tsx'))
-const SignupPage = React.lazy(() => import('@/components/pages/Signup/SignupPage.tsx'))
-const ForgotPasswordPage = React.lazy(() => import('@/components/pages/ForgotPassword/ForgotPasswordPage.tsx'))
-const VerifyCodePage = React.lazy(() => import('@/components/pages/VerifyCode/VerifyCodePage.tsx'))
-const SetPasswordPage = React.lazy(() => import('@/components/pages/SetPassword/SetPasswordPage.tsx'))
-const HomeLayout = React.lazy(() => import('@/components/templates/HomeLayout.tsx'))
-const MainLayout = React.lazy(() => import('@/components/templates/MainLayout.tsx'))
-const ServicePage = React.lazy(() => import('@/components/pages/Service/ServicePage.tsx'))
-const CostPage = React.lazy(() => import('@/components/pages/Cost/CostPage.tsx'))
-const BlogPage = React.lazy(() => import('@/components/pages/Blog/BlogPage.tsx'))
-const AboutUsPage = React.lazy(() => import('@/components/pages/AboutUs/AboutUsPage.tsx'))
-const ProfilePage = React.lazy(() => import('@/components/pages/Profile/ProfilePage.tsx'))
-const BlogDetailPage = React.lazy(() => import('@/components/pages/Blog/BlogDetailPage.tsx'))
-const AdminLayout = React.lazy(() => import('@/components/templates/AdminLayout.tsx'))
-const MyOrderPage = React.lazy(() => import('@/components/pages/MyOrder/MyOrderPage.tsx'))
-const OrderDetailPage = React.lazy(() => import('@/components/pages/OrderDetail/OrderDetailPage.tsx'))
-const AuthCallbackPage = React.lazy(() => import('@/components/pages/Auth0/AuthCallbackPage.tsx'))
+import AuthCallbackPage from '@/components/pages/Auth0/AuthCallbackPage.tsx'
+import SignupPage from '@/components/pages/Signup/SignupPage.tsx'
+import ForgotPasswordPage from '@/components/pages/ForgotPassword/ForgotPasswordPage.tsx'
+import LoginPage from '@/components/pages/Login/LoginPage.tsx'
+import VerifyCodePage from '@/components/pages/VerifyCode/VerifyCodePage.tsx'
+import SetPasswordPage from '@/components/pages/SetPassword/SetPasswordPage.tsx'
+import HomeLayout from '@/components/templates/HomeLayout.tsx'
+import MainLayout from '@/components/templates/MainLayout.tsx'
+import ServicePage from '@/components/pages/Service/ServicePage.tsx'
+import CostPage from '@/components/pages/Cost/CostPage.tsx'
+import BlogPage from '@/components/pages/Blog/BlogPage.tsx'
+import AboutUsPage from '@/components/pages/AboutUs/AboutUsPage.tsx'
+import ProfilePage from '@/components/pages/Profile/ProfilePage.tsx'
+import BlogDetailPage from '@/components/pages/Blog/BlogDetailPage.tsx'
+import MyOrderPage from '@/components/pages/MyOrder/MyOrderPage.tsx'
+import OrderDetailPage from '@/components/pages/OrderDetail/OrderDetailPage.tsx'
+import AdminLayout from '@/components/templates/AdminLayout.tsx'
 
 const AppRoutes = () => {
-  const { auth } = useAuth();
+  const { auth } = useAuth()
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
@@ -53,7 +53,9 @@ const AppRoutes = () => {
             <Route path={ROUTES.CUSTOMER} element={<AdminCustomerPage />} />
             <Route path={ROUTES.ORDER} element={<AdminOrderPage />} />
           </Route>
-        ) : (<Route path='*' element={<Navigate to='/' />} />)}
+        ) : (
+          <Route path='*' element={<Navigate to='/' />} />
+        )}
         {/* <Route path={ROUTES.DASH_BOARD} element={<AdminLayout />}>
           <Route path={ROUTES.TRUCK} element={<AdminTruckPage />} />
           <Route path={ROUTES.CUSTOMER} element={<AdminCustomerPage />} />
