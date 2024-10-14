@@ -23,6 +23,7 @@ import BlogDetailPage from '@/components/pages/Blog/BlogDetailPage.tsx'
 import MyOrderPage from '@/components/pages/MyOrder/MyOrderPage.tsx'
 import OrderDetailPage from '@/components/pages/OrderDetail/OrderDetailPage.tsx'
 import AdminLayout from '@/components/templates/AdminLayout.tsx'
+import DeleteAccountPage from '@/components/pages/DeleteAccount/DeleteAccountPage.tsx'
 
 const AppRoutes = () => {
   const { auth } = useAuth()
@@ -30,6 +31,7 @@ const AppRoutes = () => {
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path='/auth-callback' element={<AuthCallbackPage />} />
+        <Route path={ROUTES.DELETE_ACCOUT} element={<DeleteAccountPage />} />,
         <Route path={ROUTES.SIGN_UP} element={<SignupPage />} />,
         <Route path={ROUTES.LOGIN} element={<LoginPage />} />,
         <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPasswordPage />} />,

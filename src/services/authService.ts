@@ -75,6 +75,9 @@ const getUserInfo = async (): Promise<ResponseProps> => {
 const getRefresh = async (): Promise<ResponseProps> => {
   return await get('Auth/refresh-token')
 }
+const deleteAccount = async (): Promise<ResponseProps> => {
+  return await post('User/DeleteAccount', {})
+}
 export default {
   register,
   verify,
@@ -84,5 +87,6 @@ export default {
   updatePassword,
   loginWithGG,
   getUserInfo,
-  getRefresh
+  getRefresh,
+  deleteAccount
 }

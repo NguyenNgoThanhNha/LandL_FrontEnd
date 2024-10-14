@@ -21,5 +21,6 @@ export enum ROUTES {
   DASH_BOARD = '/dash-board/',
   TRUCK = 'truck',
   CUSTOMER = 'customer',
-  ORDER = 'order'
+  ORDER = 'order',
+  DELETE_ACCOUT = 'delete-account'
 }
