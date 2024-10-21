@@ -1,12 +1,11 @@
 import SearchElement from '@/components/organisms/Service/SearchElement.tsx'
-import bgHome from '@/assets/images/home/storage.jpg'
 
 const ServicePage = () => {
   return (
     <div
       className={' h-[600px] bg-cover py-10 flex items-center justify-center '}
       style={{
-        backgroundImage: `url(${bgHome})`
+        backgroundImage: `url(https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/3_scjodd.png)`
       }}
     >
       <SearchElement />

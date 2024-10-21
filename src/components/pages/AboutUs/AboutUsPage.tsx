@@ -1,5 +1,3 @@
-import red_truck from '../../../assets/images/home/red-line.jpg'
-import purple_truck from '../../../assets/images/home/truck-purple.jpg'
 import { useTranslation } from 'react-i18next'
 
 const AboutUsPage = () => {
@@ -12,13 +10,17 @@ const AboutUsPage = () => {
 
         {/* Top-left image */}
         <div className='absolute top-0 left-0'>
-          <img src={red_truck} alt='Red truck' className='w-60 h-42 rounded-md' />
+          <img
+            src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493306/1_khzaht.png'}
+            alt='Red truck'
+            className='w-60 h-42 rounded-md'
+          />
         </div>
 
         {/* Center image */}
         <div className='relative'>
           <img
-            src={purple_truck}
+            src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493309/10_tcydwd.png'}
             alt='Purple truck'
             className='md:w-[350px] md:h-[200px] rounded-md max-sm:w-64 max-sm:h-44 max-sm:tranform max-sm:translate-x-1/3'
           />
@@ -27,7 +29,7 @@ const AboutUsPage = () => {
         {/* Bottom-left image */}
         <div className='absolute bottom-0 left-0'>
           <img
-            src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562950/truck-green_msmhqy.jpg'}
+            src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/5_nx3apy.png'}
             alt='Green truck'
             className='w-60 h-44 rounded-md'
           />

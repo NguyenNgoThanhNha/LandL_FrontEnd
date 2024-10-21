@@ -1,10 +1,7 @@
-import cost_page from '../../../assets/images/cost/cost-page.jpg'
 import EstimatedCost from '@/components/organisms/Cost/EstimatedCost.tsx'
 import { useTranslation } from 'react-i18next'
 import Price from '@/components/organisms/Cost/Price.tsx'
 import { useState } from 'react'
-// import cost_1 from "../../../assets/images/cost/cost-price1.png"
-// import cost_2 from "../../../assets/images/cost/cost-price2.png"
 const CostPage = () => {
   const { t } = useTranslation()
   const [data, setData] = useState<any>(null)
@@ -12,7 +9,7 @@ const CostPage = () => {
     <div className='flex flex-col items-center gap-4 '>
       <div
         style={{
-          backgroundImage: `url(${cost_page})`
+          backgroundImage: `url(https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493308/4_vukkar.png)`
         }}
         className='bg-cover bg-center md:flex items-center w-full h-[300px] max-sm:grid max-sm:grid-cols-2'
       >
