@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562676/cost-page_dn6ulw.jpg)`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493308/4_vukkar.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

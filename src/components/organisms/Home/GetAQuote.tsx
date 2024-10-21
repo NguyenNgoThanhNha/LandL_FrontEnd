@@ -1,4 +1,3 @@
-import bgHome from '@/assets/images/home/photorealistic-scene-with-warehouse-logistics-operations.jpg'
 import { ArrowDown } from 'lucide-react'
 import { Button } from '@/components/atoms/ui/button.tsx'
 import { useTranslation } from 'react-i18next'
@@ -9,7 +8,7 @@ const GetAQuote = () => {
     <div className='relative bg-cover bg-center w-full h-[300px]  items-center justify-center flex flex-col'>
       <div
         style={{
-          backgroundImage: `url(${bgHome})`
+          backgroundImage: `url('https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493307/2_nhe9af.png')`
         }}
         className='absolute inset-0 bg-cover bg-center filter blur-[5px] z-0'
       ></div>

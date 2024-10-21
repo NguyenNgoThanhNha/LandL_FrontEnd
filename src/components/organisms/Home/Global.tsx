@@ -7,7 +7,7 @@ const Fast = () => {
     <div className='relative bg-cover bg-center w-full h-[300px]  items-center justify-center flex flex-col'>
       <div
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/dtcaf7prf/image/upload/v1728562676/cost-page_dn6ulw.jpg)`
+          backgroundImage: `url('https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493308/4_vukkar.png')`
         }}
         className='absolute inset-0 bg-cover bg-center z-0  '
       ></div>

@@ -2,7 +2,6 @@ import Header from '@/components/organisms/Global/Header.tsx'
 import Footer from '@/components/organisms/Global/Footer.tsx'
 import Slogan from '@/components/organisms/Home/Slogan.tsx'
 import HomePage from '@/components/pages/Home/HomePage.tsx'
-import bgHome from '../../assets/images/home/bg-home.jpg'
 import { Link } from 'react-router-dom'
 
 const HomeLayout = () => {
@@ -10,7 +9,7 @@ const HomeLayout = () => {
     <div className={'relative h-full'}>
       <div
         style={{
-          backgroundImage: `url(${bgHome})`
+          backgroundImage: `url('https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493312/6_lwjsxt.png')`
         }}
         className='bg-cover bg-center h-[700px] '
       >

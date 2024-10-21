@@ -1,9 +1,6 @@
 import { STEPS_USE_WEB } from '@/contants/stepUseWeb.ts'
 import { cn } from '@/utils/cn.ts'
 import { CalendarClock, Check } from 'lucide-react'
-import redLineImage from '../../../assets/images/home/red-line.jpg' // Placeholder for the second image
-import greenTruckImage from '../../../assets/images/home/truck-green.jpg' // Placeholder for the third image
-import storageImage from '../../../assets/images/home/storage.jpg'
 import StatisticElement from '@/components/atoms/StatisticElement.tsx'
 import { useTranslation } from 'react-i18next' // Placeholder for the fourth image
 
@@ -22,13 +19,25 @@ const TheWayToUseWeb = () => {
             />
           </div>
           <div className={'relative'}>
-            <img src={storageImage} alt='Storage' className={'w-full h-[200px] object-cover'} />
+            <img
+              src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/3_scjodd.png'}
+              alt='Storage'
+              className={'w-full h-[200px] object-cover'}
+            />
           </div>
           <div className={'relative'}>
-            <img src={greenTruckImage} alt='Green Truck' className={'w-full h-[200px] object-cover'} />
+            <img
+              src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/5_nx3apy.png'}
+              alt='Green Truck'
+              className={'w-full h-[200px] object-cover'}
+            />
           </div>
           <div className={'relative'}>
-            <img src={redLineImage} alt='Red Line' className={'w-full h-[200px] object-cover'} />
+            <img
+              src={'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493306/1_khzaht.png'}
+              alt='Red Line'
+              className={'w-full h-[200px] object-cover'}
+            />
           </div>
         </div>
       </div>
