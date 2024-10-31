@@ -1,5 +1,5 @@
 services:
-  server:
+  nginx:
     build:
       context: .
     environment:
@@ -17,4 +17,8 @@ services:
       VITE_AUTH0_CLIENT_ID: 8jcCFw1kgB3UTbrKTJP0IvbixEQ72n6m
       VITE_AUTH0_AUDIENCE: L&Lservices
     ports:
-      - 5175:5173
+      - 5173:80
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+
