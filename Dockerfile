@@ -9,6 +9,7 @@ COPY . .
 
 ## EXPOSE [Port you mentioned in the vite.config file]
 RUN npm run build
+RUN npm install serve --save
 
 EXPOSE 5173
 
