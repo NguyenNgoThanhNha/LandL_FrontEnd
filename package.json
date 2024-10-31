@@ -8,7 +8,6 @@
     "build": "tsc -b && vite build",
     "serve": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
     "lint:fix": "eslint --fix src --ext ts,tsx",
     "format": "prettier --check \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
     "format:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.css|*.scss)\""
