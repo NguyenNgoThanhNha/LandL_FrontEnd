@@ -2,13 +2,13 @@
   font-family: 'Bahnschrift';
   font-weight: normal;
   font-style: normal;
-  src: url("@/assets/font") format('truetype');
+  src: url("src/assets/font") format('truetype');
 }
 @font-face {
   font-family: 'Avilock Bold';
   font-weight: bold;
   font-style: normal;
-  src: url("@/assets/font2/1FTV-Avilock-Bold.otf") format('opentype');
+  src: url("src/assets/font2/1FTV-Avilock-Bold.otf") format('opentype');
 }
 .text-avilock {
   font-family: 'Avilock Bold', sans-serif;
