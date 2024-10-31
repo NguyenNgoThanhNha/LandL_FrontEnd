@@ -8,7 +8,8 @@ RUN npm i
 COPY . .
 
 ## EXPOSE [Port you mentioned in the vite.config file]
+RUN npm run build
 
 EXPOSE 5173
 
-CMD ["npm", "run", "dev"]
+CMD ["npx", "serve", "-s", "dist", "-l", "5713"]
