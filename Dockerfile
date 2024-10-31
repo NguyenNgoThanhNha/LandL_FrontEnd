@@ -1,14 +1,7 @@
-FROM node:20
-
+FROM node
 WORKDIR /LANDL_FRONTEND
-
-COPY package.json ./
-RUN npm install
-
+COPY package.json .
+RUN npm i
 COPY . .
-
-RUN npm run build
-
 EXPOSE 5173
-
 CMD ["npm", "run", "serve"]
