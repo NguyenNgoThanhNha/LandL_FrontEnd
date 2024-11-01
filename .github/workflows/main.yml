@@ -8,10 +8,23 @@ on:
 jobs:
   docker-compose:
     runs-on: self-hosted
-    environment: docker
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       
       - name: Run Docker Compose
+        env:
+          NODE_ENV: production
+          VITE_ORIGINAL_URL: ${{ secrets.VITE_ORIGINAL_URL }}
+          VITE_MAPBOX_URL: ${{ secrets.VITE_MAPBOX_URL }}
+          VITE_GOONG_API_KEY: ${{ secrets.VITE_GOONG_API_KEY }}
+          VITE_MAP_STYLE: ${{ secrets.VITE_MAP_STYLE }}
+          VITE_GOONG_URL_SEARCH: ${{ secrets.VITE_GOONG_URL_SEARCH }}
+          VITE_GOONG_URL_DIRECTION: ${{ secrets.VITE_GOONG_URL_DIRECTION }}
+          VITE_GOONG_URL_GEOCODING: ${{ secrets.VITE_GOONG_URL_GEOCODING }}
+          VITE_GOONG_URL_PLACE_DETAIL: ${{ secrets.VITE_GOONG_URL_PLACE_DETAIL }}
+          VITE_AUTH0_CALLBACK_URL: ${{ secrets.VITE_AUTH0_CALLBACK_URL }}
+          VITE_AUTH0_DOMAIN: ${{ secrets.VITE_AUTH0_DOMAIN }}
+          VITE_AUTH0_CLIENT_ID: ${{ secrets.VITE_AUTH0_CLIENT_ID }}
+          VITE_AUTH0_AUDIENCE: ${{ secrets.VITE_AUTH0_AUDIENCE }}
         run: docker compose -f compose.production.yaml up --build -d
