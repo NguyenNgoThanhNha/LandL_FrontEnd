@@ -17,10 +17,10 @@ RUN npm run build
 FROM nginx:latest AS production-stage
 
 # Copy cấu hình Nginx nếu có
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY /app/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy thư mục dist từ build-stage sang thư mục phục vụ của Nginx
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY --from=build-stage /app/build /usr/share/nginx/html
 
 # Expose cổng 80
 EXPOSE 80
