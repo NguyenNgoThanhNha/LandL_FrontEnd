@@ -17,4 +17,4 @@ services:
       VITE_AUTH0_CLIENT_ID: 8jcCFw1kgB3UTbrKTJP0IvbixEQ72n6m
       VITE_AUTH0_AUDIENCE: L&Lservices
     ports:
-      - 5175:5173
+      - 5176:5173
