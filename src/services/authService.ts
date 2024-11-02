@@ -1,4 +1,4 @@
-import { get, post, ResponseProps } from '@/services/root.ts'
+import { get, patchFormData, post, ResponseProps } from '@/services/root.ts'
 import { UserSignInGGType, UserSignupType } from '@/schemas/userSchema.ts'
 
 interface RegisterProps {
@@ -78,6 +78,16 @@ const getRefresh = async (): Promise<ResponseProps> => {
 const deleteAccount = async (): Promise<ResponseProps> => {
   return await post('User/DeleteAccount', {})
 }
+
+interface UpdateUserInformationProps {
+  email: string
+  data: FormData
+}
+
+export const updateUserInformation = async ({ email, data }: UpdateUserInformationProps): Promise<ResponseProps> => {
+  return await patchFormData(`User/UpdateInfo?email=${email}`, data)
+}
+
 export default {
   register,
   verify,
@@ -88,5 +98,6 @@ export default {
   loginWithGG,
   getUserInfo,
   getRefresh,
-  deleteAccount
+  deleteAccount,
+  updateUserInformation
 }
