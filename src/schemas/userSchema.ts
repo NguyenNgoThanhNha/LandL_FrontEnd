@@ -143,3 +143,28 @@ export const UpdateInfoSchema = z.object({
 })
 
 export type UpdateInfoType = z.infer<typeof UpdateInfoSchema>
+
+// update user info
+export const UpdateUserInfoSchema = z.object({
+  userName: z.string().min(1, 'User name is required'),
+  fullName: z.string().min(1, 'Full name is required'),
+  phoneNumber: z.string().max(10, "Phone number is required and max length 10"),
+  city: z.string().min(1, 'City is required'),
+  address: z.string().min(1, 'Address is required'),
+  gender: z.string().min(1, 'Gender is required'),
+  birthDate: z.date().refine((birthDate) => {
+    const currentDate = new Date();
+    return birthDate <= currentDate;
+  }, {
+    message: 'Birth date must not be in the future',
+  }),
+  avatar: z.instanceof(File).optional(), // Make avatar optional
+})
+  .refine((data) => !data.avatar || data.avatar instanceof File, {
+    message: 'Avatar must be a valid file format',
+    path: ['avatar'],
+  });
+
+export type UpdateUserInfoType = z.infer<typeof UpdateUserInfoSchema>;
+
+
