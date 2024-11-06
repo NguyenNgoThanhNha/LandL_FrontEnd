@@ -1,14 +1,29 @@
-FROM node:20
+## Sử dụng Node để build
+#FROM node:20 AS build-stage
+#
+## Tạo thư mục làm việc trong container
+#WORKDIR /app
+#
+## Copy chỉ các file package.json và package-lock.json trước để cài đặt dependencies
+#COPY package*.json tsconfig.json ./
+#
+## Cài đặt các package
+#RUN npm install
+#
+## Copy toàn bộ file của project vào container
+#COPY . .
+#
+## Build project để tạo thư mục dist
+#RUN npm run build
 
-WORKDIR /LANDL_FRONTEND
+# Sử dụng Nginx để phục vụ nội dung
+FROM nginx:latest
 
-COPY package.json .
-RUN npm i
-
-COPY . .
-
-## EXPOSE [Port you mentioned in the vite.config file]
-
-EXPOSE 5173
-
-CMD ["npm", "run", "dev"]
+## Copy thư mục dist từ build-stage sang thư mục phục vụ của Nginx
+#COPY --from=build-stage /app/dist /usr/share/nginx/html
+#
+## Expose cổng 80
+#EXPOSE 80
+#
+## Chạy Nginx
+#CMD ["nginx", "-g", "daemon off;"]
