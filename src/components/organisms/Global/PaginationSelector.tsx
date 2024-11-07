@@ -25,7 +25,7 @@ const PaginationSeletor = ({ totalPages, currentPage, setPage }: PaginationCusto
 
   return (
     <Pagination>
-      <PaginationContent className='mt-2'>
+      <PaginationContent className='mt-1 p-1'>
         <button
           className={cn('cursor-pointer bg-transparent', currentPage === 1 && 'cursor-default')}
           onClick={() => setPage(currentPage - 1)}
@@ -44,7 +44,7 @@ const PaginationSeletor = ({ totalPages, currentPage, setPage }: PaginationCusto
                 <div
                   className={cn(
                     'flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-slate-400 ',
-                    currentPage === key && ' border-rose-100 bg-rose-500'
+                    currentPage === key && ' border-blue-100 bg-blue-200'
                   )}
                   onClick={() => setPage(key)}
                 >
