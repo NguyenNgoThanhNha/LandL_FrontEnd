@@ -17,7 +17,7 @@ const HomePage = () => {
     if (auth.user?.roleID == 1) {
       navigate(ROUTES.DASH_BOARD + 'truck')
     }
-  }, [])
+  }, [auth])
   return (
     <div className={'flex flex-col items-center justify-center relative'}>
       <div className={'absolute top-0 md:w-3/5 max-sm:w-full max-sm:mx-4 transform  -translate-y-1/2 '}>
