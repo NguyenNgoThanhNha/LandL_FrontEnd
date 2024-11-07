@@ -1,6 +1,6 @@
-import { Maximize2Icon, Minimize2Icon, LogOutIcon, UserRound } from 'lucide-react'
+import { LogOutIcon, Maximize2Icon, Minimize2Icon, UserRound } from 'lucide-react'
 
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
+import { createContext, ReactNode, useContext, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { cn } from '@/utils/cn.ts'
 import navAdmin from '@/contants/sidebarItems.tsx'
@@ -9,14 +9,14 @@ import { ROUTES } from '@/contants/routerEndpoint'
 
 const SidebarContext = createContext<{ expanded: boolean; setActiveItem: (item: string) => void } | null>(null)
 const Sidebar = () => {
-  const { setAuth } = useAuth();
-  const navigate = useNavigate();
+  const { setAuth } = useAuth()
+  const navigate = useNavigate()
   const activePath = useLocation()
   const [activeItem, setActiveItem] = useState<string>(activePath.pathname)
   const [expanded, setExpanded] = useState<boolean>(true)
 
   const handleLogout = () => {
-    localStorage.removeItem("accessToken");
+    localStorage.removeItem('accessToken')
     setAuth({ user: undefined })
     navigate(ROUTES.ROOT)
   }
@@ -36,7 +36,7 @@ const Sidebar = () => {
           </button>
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className={'flex justify-center items-center transition-all duration-1000'}
+            className={'flex justify-center items-center transition-all duration-1000 bg-transparent'}
           >
             {expanded ? (
               <Minimize2Icon size={20} />
@@ -67,13 +67,15 @@ const Sidebar = () => {
         <div
           onClick={handleLogout}
           className={cn(
-            'font-semibold leading-4 transition-all duration-1000 cursor-pointer bg-gradient-to-tr from-orange-600 to-orange-300 p-2 rounded-md flex items-center justify-start mx-3'
+            ' leading-4 transition-all duration-1000 cursor-pointer bg-rose-500 p-2 rounded-md flex items-center text-slate-700 justify-start mx-3'
           )}
         >
           <span>
             <LogOutIcon />
           </span>
-          <span className={cn('overflow-hidden  transition-all', expanded ? 'w-53 mx-3 opacity-100' : 'hidden')}>Logout</span>
+          <span className={cn('overflow-hidden  transition-all', expanded ? 'w-53 mx-3 opacity-100' : 'hidden')}>
+            Logout
+          </span>
         </div>
 
         {/* Test Text */}
@@ -81,7 +83,7 @@ const Sidebar = () => {
           {/* <img src={GenerateImage(auth?.user ?? "DRAFT")} alt='avatar' className={"w-10 h-10 rounded-md "} /> */}
           <div
             className={cn(
-              'flex items-center justify-start cursor-pointer font-semibold leading-4 transition-all duration-1000 bg-gradient-to-tr from-orange-600 to-orange-300 p-2 rounded-md text-black w-full mx-1'
+              'flex items-center justify-start cursor-pointer text-slate-700 leading-4 transition-all duration-1000 bg-rose-500 p-2 rounded-md  w-full mx-1'
             )}
           >
             <span>
@@ -112,10 +114,8 @@ const SidebarItem = ({
     <Link to={path}>
       <li
         className={cn(
-          'relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer transition-colors group',
-          active
-            ? 'bg-gradient-to-tr from-orange-600 to-orange-300 text-black '
-            : 'hover:border-indigo-50 text-black'
+          'relative flex items-center py-2 px-3 my-1 font-normal rounded-md cursor-pointer transition-colors group',
+          active ? 'bg-rose-500 0 text-slate-700 ' : 'hover:border-indigo-50 text-black'
         )}
         onClick={() => setActiveItem(path)}
       >

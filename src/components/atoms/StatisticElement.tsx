@@ -14,9 +14,7 @@ const StatisticElement = ({ content, data }: StatisticElementProps) => {
   return (
     <div className={'flex gap-2 items-center justify-center'}>
       <div className={'flex  gap-2 items-center justify-center'}>
-        <div className={'md:text-[60px] max-sm:text-[40px] font-black text-orangeTheme flex'}>
-          {data}
-        </div>
+        <div className={'md:text-[60px] max-sm:text-[40px] font-black text-orangeTheme flex'}>{data}</div>
       </div>
       <div className={'flex flex-col'}>
         {words.map((word, index) => (

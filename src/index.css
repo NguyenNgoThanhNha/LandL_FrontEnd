@@ -2,13 +2,13 @@
   font-family: 'Bahnschrift';
   font-weight: normal;
   font-style: normal;
-  src: url("../public/font") format('truetype');
+  src: url('../public/font') format('truetype');
 }
 @font-face {
   font-family: 'Avilock Bold';
   font-weight: bold;
   font-style: normal;
-  src: url("../public/font2/1FTV-Avilock-Bold.otf") format('opentype');
+  src: url('../public/font2/1FTV-Avilock-Bold.otf') format('opentype');
 }
 .text-avilock {
   font-family: 'Avilock Bold', sans-serif;
@@ -19,12 +19,11 @@
 }
 :root {
   line-height: 1.5;
-  font-family: "Bahnschrift", sans-serif;
+  font-family: 'Bahnschrift', sans-serif;
   font-weight: 300;
   font-size: 17px;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: 'wdth' 100;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -37,7 +36,6 @@
   /*margin: 0 5rem;*/
   height: 100vh;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {

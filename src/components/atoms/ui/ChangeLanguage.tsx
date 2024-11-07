@@ -15,20 +15,23 @@ const ChangeLanguage = () => {
     } else {
       i18n.changeLanguage('en')
     }
-    
   }
   useEffect(() => {
     changeLanguage()
   }, [value])
   return (
-    <div onClick={() => setValue(!value)}
-         className={cn('cursor-pointer flex gap-1 text-center p-2 font-medium ', isMobile ? 'items-start justify-start' : 'items-center justify-center')}>
+    <div
+      onClick={() => setValue(!value)}
+      className={cn(
+        'cursor-pointer flex gap-1 text-center p-2 font-medium ',
+        isMobile ? 'items-start justify-start' : 'items-center justify-center'
+      )}
+    >
       {value ? 'VN' : 'EN'}
       <span>
         <ChevronDown size={15} />
       </span>
     </div>
-  
   )
 }
 
