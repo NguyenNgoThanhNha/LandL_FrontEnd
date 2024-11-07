@@ -27,7 +27,7 @@ const Sidebar = () => {
         <div className={'p-2 flex justify-between items-center'}>
           <button
             className={cn(
-              'p-2 rounded-lg bg-gray-50 hover:bg-gray-100 text-orange-600 font-black overflow-hidden transition-all duration-1000',
+              'p-2 rounded-lg hover:bg-gray-100 text-orange-600 font-black overflow-hidden transition-all duration-1000',
               expanded ? 'w-40 opacity-100' : 'w-0 opacity-0'
             )}
             style={{ transition: 'width 0.5s ease, opacity 0.5s ease' }}
@@ -67,7 +67,7 @@ const Sidebar = () => {
         <div
           onClick={handleLogout}
           className={cn(
-            ' leading-4 transition-all duration-1000 cursor-pointer bg-rose-500 p-2 rounded-md flex items-center text-slate-700 justify-start mx-3'
+            ' leading-4 transition-all duration-1000 cursor-pointer bg-blue-200 p-2 rounded-md flex items-center text-slate-700 justify-start mx-3'
           )}
         >
           <span>
@@ -83,7 +83,7 @@ const Sidebar = () => {
           {/* <img src={GenerateImage(auth?.user ?? "DRAFT")} alt='avatar' className={"w-10 h-10 rounded-md "} /> */}
           <div
             className={cn(
-              'flex items-center justify-start cursor-pointer text-slate-700 leading-4 transition-all duration-1000 bg-rose-500 p-2 rounded-md  w-full mx-1'
+              'flex items-center justify-start cursor-pointer text-slate-700 leading-4 transition-all duration-1000 bg-blue-200 p-2 rounded-md  w-full mx-1'
             )}
           >
             <span>
@@ -115,7 +115,7 @@ const SidebarItem = ({
       <li
         className={cn(
           'relative flex items-center py-2 px-3 my-1 font-normal rounded-md cursor-pointer transition-colors group',
-          active ? 'bg-rose-500 0 text-slate-700 ' : 'hover:border-indigo-50 text-black'
+          active ? 'bg-blue-200 0 text-slate-700 ' : 'hover:border-indigo-50 text-black'
         )}
         onClick={() => setActiveItem(path)}
       >
