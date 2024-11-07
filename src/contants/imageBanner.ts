@@ -1,43 +1,43 @@
 export const IMAGES_SIGNUP = [
   {
     id: 1,
-    url: '/delivery1.jfif'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493309/10_tcydwd.png'
   },
   {
     id: 2,
-    url: '/delivery2.jfif'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/3_scjodd.png'
   },
   {
     id: 3,
-    url: '/delivery3.jfif'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1730995729/1-01_p9awk5.jpg'
   }
 ]
 
 export const IMAGES_LOGIN = [
   {
     id: 1,
-    url: '/src/assets/images/login/regre.jpg'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493309/10_tcydwd.png'
   },
   {
     id: 2,
-    url: '/src/assets/images/login/scene-with-photorealistic-logistics-operations-proceedings.jpg'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/3_scjodd.png'
   },
   {
     id: 3,
-    url: '/src/assets/images/login/1-01.jpg'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1730995729/1-01_p9awk5.jpg'
   }
 ]
 export const IMAGES_FORGOTPASSWORD = [
   {
     id: 1,
-    url: '/delivery1.jfif'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493309/10_tcydwd.png'
   },
   {
     id: 2,
-    url: '/delivery2.jfif'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1729493310/3_scjodd.png'
   },
   {
     id: 3,
-    url: '/delivery3.jfif'
+    url: 'https://res.cloudinary.com/dtcaf7prf/image/upload/v1730995729/1-01_p9awk5.jpg'
   }
 ]

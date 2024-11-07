@@ -1,45 +1,68 @@
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious
-} from '@/components/atoms/ui/pagination'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem } from '@/components/atoms/ui/pagination.tsx'
+import { cn } from '@/utils/cn.ts'
+import { usePagination } from '@/utils/usePagination.ts'
 
-type Props = {
-  page: number
-  totalPage: number
-  onPageChange: (page: number) => void
+interface PaginationCustomProps {
+  currentPage: number
+  totalPages: number
+  setPage: (page: number) => void
 }
-const PaginationSelector = ({ page, totalPage, onPageChange }: Props) => {
-  const pageNumbers = []
-  for (let i = 1; i <= totalPage; i++) {
-    pageNumbers.push(i)
+
+const PaginationSeletor = ({ totalPages, currentPage, setPage }: PaginationCustomProps) => {
+  const paginationRange = usePagination({
+    currentPage,
+    totalPages
+  })
+  let lastPage = 0
+
+  if (paginationRange) {
+    if (currentPage === 0 || paginationRange?.length < 2) return null
+    lastPage = paginationRange[paginationRange?.length - 1]
+  } else {
+    return null
   }
+
   return (
     <Pagination>
-      <PaginationContent>
-        {page !== 1 && (
-          <PaginationItem>
-            <PaginationPrevious href='#' onClick={() => onPageChange(page - 1)} />
-          </PaginationItem>
-        )}
-        {pageNumbers.map((number, index) => (
-          <PaginationItem key={index}>
-            <PaginationLink href='#' onClick={() => onPageChange(number)} isActive={page === number}>
-              {number}
-            </PaginationLink>
-          </PaginationItem>
-        ))}
-        {page !== pageNumbers.length && (
-          <PaginationItem>
-            <PaginationNext href='#' onClick={() => onPageChange(page + 1)} />
-          </PaginationItem>
-        )}
+      <PaginationContent className='mt-2 p-4'>
+        <button
+          className={cn('cursor-pointer bg-transparent', currentPage === 1 && 'cursor-default')}
+          onClick={() => setPage(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          <ChevronLeft />
+        </button>
+        {paginationRange &&
+          paginationRange.map((key, idx) =>
+            key === -1 ? (
+              <PaginationItem key={idx}>
+                <PaginationEllipsis />
+              </PaginationItem>
+            ) : (
+              <PaginationItem key={idx} className='flex'>
+                <div
+                  className={cn(
+                    'flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-slate-400 ',
+                    currentPage === key && ' border-rose-100 bg-rose-500'
+                  )}
+                  onClick={() => setPage(key)}
+                >
+                  {key}
+                </div>
+              </PaginationItem>
+            )
+          )}
+        <button
+          className={cn('cursor-pointer bg-transparent', currentPage === lastPage && 'cursor-default')}
+          onClick={() => setPage(currentPage + 1)}
+          disabled={currentPage === lastPage}
+        >
+          <ChevronRight />
+        </button>
       </PaginationContent>
     </Pagination>
   )
 }
 
-export default PaginationSelector
+export default PaginationSeletor
